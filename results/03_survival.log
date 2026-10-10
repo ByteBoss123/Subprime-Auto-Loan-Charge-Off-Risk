@@ -1,0 +1,63 @@
+{
+ "development_loans": 50156,
+ "dev_chargeoffs": 2929,
+ "dev_prepays": 11270,
+ "test_in_time": {
+  "auc": 0.7027,
+  "mean_pd": 0.0522,
+  "actual": 0.0584
+ },
+ "out_of_time": {
+  "auc": 0.653,
+  "mean_pd": 0.1049,
+  "actual": 0.0909
+ },
+ "ph_check_schoenfeld_corr_with_time": {
+  "score": 0.0166,
+  "orig_apr": -0.1071,
+  "orig_term": -0.0428,
+  "pti": -0.0327,
+  "ltv": -0.0636,
+  "log_amount": -0.0013,
+  "used": -0.0401,
+  "income_verified_3": -0.0132,
+  "employment_verified_3": -0.0179,
+  "subvented_any": 0.0343,
+  "score_missing": -0.0255
+ },
+ "pool_age_at_cutoff_months": {
+  "count": 71652.0,
+  "mean": 20.4,
+  "std": 23.4,
+  "min": 2.0,
+  "25%": 5.0,
+  "50%": 8.0,
+  "75%": 24.0,
+  "max": 85.0
+ }
+}
+                       hazard_ratio_per_sd  p_value  ci_low  ci_high
+score                               0.9477   0.0099  0.9099   0.9872
+orig_apr                            1.7043   0.0000  1.6168   1.7966
+orig_term                           0.8994   0.0000  0.8642   0.9360
+pti                                 1.1611   0.0000  1.1164   1.2076
+ltv                                 1.2300   0.0000  1.1719   1.2909
+log_amount                          1.0227   0.3831  0.9724   1.0757
+used                                1.0395   0.6727  0.8684   1.2444
+income_verified_3                   0.9843   0.7900  0.8759   1.1060
+employment_verified_3               1.0711   0.1905  0.9664   1.1871
+subvented_any                       1.1458   0.1517  0.9513   1.3801
+score_missing                       0.8031   0.3683  0.4981   1.2949
+ age_months  baseline_monthly_co_hazard
+          6                    0.000839
+         12                    0.003078
+         18                    0.004568
+         24                    0.006182
+         30                    0.012857
+         36                    0.005561
+         42                    0.010789
+         48                    0.004507
+         54                    0.005937
+         60                    0.002818
+         66                    0.002001
+         72                    0.002147

@@ -1,0 +1,28 @@
+{
+ "raw_records": 300,
+ "matched_in_panel": 300,
+ "orig_amount_match": 300,
+ "orig_apr_match": 300,
+ "orig_term_match": 300,
+ "score_match": 300,
+ "state_match": 290,
+ "originators": [
+  "GM FINANCIAL"
+ ],
+ "panel_loans": 72665,
+ "duplicate_asset_ids": 0,
+ "exit_type_counts": {
+  "censored": 34562,
+  "prepay": 28547,
+  "chargeoff": 9550,
+  "repurchase": 6
+ },
+ "chargeoff_without_exit_period": 0,
+ "apr_out_of_range": 0,
+ "pti_out_of_range": 0,
+ "score_missing": 492,
+ "orig_month_range": [
+  "2017-04-01",
+  "2024-03-01"
+ ]
+}

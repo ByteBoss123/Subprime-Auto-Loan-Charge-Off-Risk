@@ -1,0 +1,142 @@
+{
+ "windows": {
+  "development": "loans active 2024-05-31, charge-off by 2025-05-31",
+  "out_of_time": "loans active 2025-05-31, charge-off by 2026-05-31"
+ },
+ "full_model": {
+  "train": {
+   "n": 50156,
+   "bad_rate": 0.0584,
+   "auc": 0.6764,
+   "gini": 0.3528,
+   "ks": 0.2656
+  },
+  "test_in_time": {
+   "n": 21496,
+   "bad_rate": 0.0584,
+   "auc": 0.6869,
+   "gini": 0.3738,
+   "ks": 0.2836
+  },
+  "out_of_time": {
+   "n": 51231,
+   "bad_rate": 0.0909,
+   "auc": 0.6557,
+   "gini": 0.3114,
+   "ks": 0.2289
+  },
+  "mean_pd_vs_actual_oot": [
+   0.0601,
+   0.0909
+  ],
+  "hosmer_lemeshow_test": [
+   7.33,
+   0.501281594071449
+  ],
+  "hosmer_lemeshow_oot": [
+   947.63,
+   2.9882576993389915e-199
+  ]
+ },
+ "score_only": {
+  "test_in_time": {
+   "n": 21496,
+   "bad_rate": 0.0584,
+   "auc": 0.561,
+   "gini": 0.122,
+   "ks": 0.1058
+  },
+  "out_of_time": {
+   "n": 51231,
+   "bad_rate": 0.0909,
+   "auc": 0.5501,
+   "gini": 0.1002,
+   "ks": 0.0906
+  }
+ },
+ "pca_model": {
+  "components_for_80pct_variance": 5,
+  "cumulative_variance": [
+   0.245,
+   0.461,
+   0.609,
+   0.755,
+   0.877,
+   0.959,
+   1.0
+  ],
+  "test_in_time": {
+   "n": 21496,
+   "bad_rate": 0.0584,
+   "auc": 0.6853,
+   "gini": 0.3706,
+   "ks": 0.2827
+  },
+  "out_of_time": {
+   "n": 51231,
+   "bad_rate": 0.0909,
+   "auc": 0.6503,
+   "gini": 0.3005,
+   "ks": 0.2247
+  }
+ },
+ "vif": {
+  "score": 1.34,
+  "orig_apr": 2.2,
+  "orig_term": 1.25,
+  "pti": 1.13,
+  "ltv": 1.32,
+  "log_amount": 1.66,
+  "age_months": 1.51,
+  "used": 3.8,
+  "income_verified_3": 2.32,
+  "employment_verified_3": 1.99,
+  "subvented_any": 3.78,
+  "score_missing": 1.0
+ },
+ "psi": {
+  "score": 0.0005,
+  "orig_apr": 0.0116,
+  "orig_term": 0.0057,
+  "pti": 0.0004,
+  "ltv": 0.0002,
+  "log_amount": 0.0027,
+  "age_months": 8.2505,
+  "model_pd": 0.0045
+ }
+}
+                       coef_per_sd  odds_ratio  p_value  ci_low  ci_high
+const                      -3.1933      0.0410   0.0000  0.0340   0.0496
+score                      -0.1050      0.9003   0.0000  0.8630   0.9393
+orig_apr                    0.4423      1.5563   0.0000  1.4727   1.6445
+orig_term                  -0.0773      0.9256   0.0004  0.8868   0.9661
+pti                         0.1773      1.1940   0.0000  1.1466   1.2434
+ltv                         0.2403      1.2716   0.0000  1.2104   1.3360
+log_amount                  0.0557      1.0572   0.0358  1.0037   1.1137
+age_months                 -0.0058      0.9942   0.8190  0.9463   1.0447
+used                        0.1496      1.1614   0.1030  0.9702   1.3901
+income_verified_3           0.0736      1.0764   0.2315  0.9541   1.2142
+employment_verified_3       0.0573      1.0590   0.2951  0.9513   1.1789
+subvented_any               0.1780      1.1948   0.0611  0.9917   1.4395
+score_missing              -0.2408      0.7860   0.3405  0.4791   1.2896
+              PC1    PC2    PC3    PC4    PC5
+score       0.375  0.008  0.723 -0.189  0.286
+orig_apr   -0.481  0.543 -0.042  0.046 -0.084
+orig_term   0.482  0.238 -0.396  0.062 -0.377
+pti         0.156  0.418 -0.275  0.238  0.802
+ltv         0.017  0.430  0.477  0.585 -0.310
+log_amount  0.590  0.247 -0.087 -0.165 -0.161
+age_months  0.156 -0.477 -0.089  0.730  0.061
+OOT deciles
+            n  predicted  actual
+decile                         
+1       5124     0.0168  0.0254
+2       5123     0.0260  0.0437
+3       5123     0.0333  0.0502
+4       5123     0.0405  0.0670
+5       5123     0.0480  0.0798
+6       5123     0.0565  0.0997
+7       5123     0.0667  0.1017
+8       5123     0.0788  0.1247
+9       5123     0.0968  0.1425
+10      5123     0.1374  0.1741

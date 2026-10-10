@@ -1,0 +1,38 @@
+{
+ "development_loans": 50156,
+ "dev_chargeoffs": 2929,
+ "dev_prepays": 11270,
+ "test_in_time": {
+  "auc": 0.7027,
+  "mean_pd": 0.0522,
+  "actual": 0.0584
+ },
+ "out_of_time": {
+  "auc": 0.653,
+  "mean_pd": 0.1049,
+  "actual": 0.0909
+ },
+ "ph_check_schoenfeld_corr_with_time": {
+  "score": 0.0166,
+  "orig_apr": -0.1071,
+  "orig_term": -0.0428,
+  "pti": -0.0327,
+  "ltv": -0.0636,
+  "log_amount": -0.0013,
+  "used": -0.0401,
+  "income_verified_3": -0.0132,
+  "employment_verified_3": -0.0179,
+  "subvented_any": 0.0343,
+  "score_missing": -0.0255
+ },
+ "pool_age_at_cutoff_months": {
+  "count": 71652.0,
+  "mean": 20.4,
+  "std": 23.4,
+  "min": 2.0,
+  "25%": 5.0,
+  "50%": 8.0,
+  "75%": 24.0,
+  "max": 85.0
+ }
+}
