@@ -51,7 +51,7 @@ Estimate each active loan's probability of charge-off within the next 12 months,
 - **Proportional hazards are mildly violated for APR.** The Schoenfeld residual correlation with time is -0.107, so the APR effect weakens with age. Other covariates have |r| < 0.07.
 - **Seasoning curve at older ages is noisy.** The baseline hazard beyond about 24 months rests on fewer, older-vintage loans (median age at cutoff is 8 months). That likely explains the Cox model's over-prediction.
 - **Macro and calendar effects are not separated from seasoning.** The model attributes the loss rise to age alone.
-- **The SAS replication was run in SAS OnDemand for Academics** (see `sas/`); its output is not committed to this repo.
+- **SAS replication is partial.** `PROC PHREG` reproduces the Cox model on identical rows (hazard ratios within 0.025 of Python). The committed `PROC LOGISTIC` output is from an earlier multi-snapshot PD design, so the current logistic model has not been re-run in SAS (`results/05_sas_output_2026-10-02.pdf`).
 
 ## 6. Monitoring Protocol
 | Check | Frequency | Trigger | Action |
