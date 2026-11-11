@@ -28,9 +28,13 @@ bash run.sh
 | `src/02_pd_model.py` | Logistic PD model, score-only and PCA benchmarks, out-of-time backtest, PSI |
 | `src/03_survival.py` | Cause-specific Cox models with delayed entry, competing-risks 12-month PD, proportional-hazards check |
 | `src/04_export_for_sas.py` | Writes the exact modeling tables for SAS |
-| `sas/auto_loan_credit_risk.sas` | `PROC LOGISTIC`, `PROC PRINCOMP` and `PROC PHREG` (with `ENTRY=`) replication. Not yet executed; runs in SAS OnDemand for Academics |
+| `sas/auto_loan_credit_risk.sas` | `PROC LOGISTIC`, `PROC PRINCOMP` and `PROC PHREG` (with `ENTRY=`) replication. Run in SAS OnDemand for Academics (see note below) |
 
 Outputs are in `results/`.
+
+**SAS replication.** Both models reproduce in SAS OnDemand for Academics on identical rows.
+- Logistic PD model (`sas/logistic_replication.sas`, output in `results/06_sas_logistic_replication.txt`): in-time test AUC 0.686887 and out-of-time AUC 0.655683 in SAS, vs 0.6869 and 0.6557 in Python; APR odds ratio 1.556 in both.
+- Cox model (`PROC PHREG`, output in `results/05_sas_output_2026-10-02.pdf`): same 50,156 loans and 2,929 charge-offs, every hazard ratio within 0.025 of Python (APR 1.680 vs 1.704). The `PROC LOGISTIC` pages in that PDF are from an earlier multi-snapshot PD design and are superseded by `06`.
 
 ## Data provenance
 - **Source:** SEC EDGAR, CIK 0002020251.

@@ -1,0 +1,17 @@
+SAS replication of the current logistic PD model (sas/logistic_replication.sas)
+Run: SAS OnDemand for Academics (SAS Studio), 2026-11-11. Input: sas/pd_snapshots.csv.
+
+Rows by split (SAS PROC FREQ)       Python (results/02_pd_model.json)
+  train  50,156  (2,929 charge-offs)   50,156
+  test   21,496  (1,256)               21,496
+  oot    51,231  (4,656)               51,231
+
+AUC                       SAS        Python
+  train (c statistic)     0.676      0.6764
+  in-time test            0.686887   0.6869
+  out-of-time             0.655683   0.6557
+
+Odds ratios per SD (SAS)  SAS        Python (results/02_logit_coefficients.csv)
+  orig_apr                1.556      1.5563
+  score                   0.900      0.9003
+  orig_term               0.926      0.9256
