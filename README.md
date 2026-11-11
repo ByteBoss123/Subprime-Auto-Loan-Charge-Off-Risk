@@ -28,7 +28,7 @@ bash run.sh
 | `src/02_pd_model.py` | Logistic PD model, score-only and PCA benchmarks, out-of-time backtest, PSI |
 | `src/03_survival.py` | Cause-specific Cox models with delayed entry, competing-risks 12-month PD, proportional-hazards check |
 | `src/04_export_for_sas.py` | Writes the exact modeling tables for SAS |
-| `sas/auto_loan_credit_risk.sas` | `PROC LOGISTIC`, `PROC PRINCOMP` and `PROC PHREG` (with `ENTRY=`) replication. Not yet executed; runs in SAS OnDemand for Academics |
+| `sas/auto_loan_credit_risk.sas` | `PROC LOGISTIC`, `PROC PRINCOMP` and `PROC PHREG` (with `ENTRY=`) replication of the Python models. Executed in SAS OnDemand for Academics |
 
 Outputs are in `results/`.
 

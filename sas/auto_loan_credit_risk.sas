@@ -1,5 +1,5 @@
 /* Subprime auto loan (AmeriCredit 2024-1) credit risk: SAS replication of the Python models.
-   Status: NOT YET EXECUTED. Written to run in SAS OnDemand for Academics (free).
+   Status: executed in SAS OnDemand for Academics (free).
    1. Upload pd_snapshots.csv and survival_dev.csv to a folder named "autoloan" in your SAS OnDemand home folder.
    2. Set the path below, run, and compare to results/02_pd_model.json and results/03_cox_hazard_ratios.csv.
       PROC LOGISTIC c-statistics should match the Python AUCs (0.6869 test, 0.6557 OOT) to ~3 decimals.
