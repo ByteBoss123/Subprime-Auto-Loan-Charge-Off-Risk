@@ -18,8 +18,9 @@ Full write-up, limitations and monitoring triggers: [MODEL_CARD.md](MODEL_CARD.m
 
 ## Run
 ```
-pip install pandas pyarrow statsmodels scikit-learn
+pip install -r requirements.txt pytest
 bash run.sh
+pytest -q tests   # 15 tests: label logic, metric helpers, README numbers vs results files
 ```
 
 | Script | What it does |
