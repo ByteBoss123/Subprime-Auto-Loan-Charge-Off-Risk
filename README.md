@@ -41,3 +41,7 @@ Outputs are in `results/`.
 - **Source:** SEC EDGAR, CIK 0002020251.
 - **Parsing:** the loan-level panel was parsed by the MIT-licensed public repo [SamuelJWebber/abs-risk](https://github.com/SamuelJWebber/abs-risk) (commit pinned in `data/SOURCE_COMMIT`), which logs a SHA-256 for every filing in `data/amcar-2024-1.diagnostics.json`.
 - **Independent check:** this project re-parses raw records with its own code before using the panel.
+
+## License
+
+Code in this repository is released under the MIT License (see `LICENSE`). Datasets and third-party files are not covered by this license and remain under their original sources' terms.
